@@ -1,0 +1,16 @@
+{
+  "name": "jeyroik/extas-q-crawlers-jira-kpi",
+  "description": "Jira KPI crawler package",
+  "require": {
+    "jeyroik/extas-installer": "*",
+    "jeyroik/extas-q-crawlers-jira-issues": "*",
+    "jeyroik/extas-q-crawlers-jira-qualification": "*",
+    "jeyroik/extas-q-crawlers-jira-reaction": "*",
+    "jeyroik/extas-q-crawlers-jira-control": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "extas\\": "src/"
+    }
+  }
+}
