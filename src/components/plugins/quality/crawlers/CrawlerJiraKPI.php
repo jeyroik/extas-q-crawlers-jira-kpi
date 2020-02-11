@@ -53,7 +53,7 @@ class CrawlerJiraKPI extends Crawler
         $issuesRepo = SystemContainer::getItem(IJiraIssuesRateRepository::class);
         $reactionRepo = SystemContainer::getItem(IJiraReactionRateRepository::class);
 
-        $month = date('Ym');
+        $month = (int) date('Ym');
 
         $qs = $qualificationRepo->all([IIndex::FIELD__INDEX_MONTH => $month]);
         $control = $controlRepo->one([IJiraControlRate::FIELD__MONTH => $month]);
@@ -77,6 +77,7 @@ class CrawlerJiraKPI extends Crawler
         $kpi = $kpiRepo->one([IJiraKPIRate::FIELD__MONTH => $month]);
 
         if (!$kpi) {
+            $output->writeln(['<comment>Can not find kpi for the ' . $month . '</comment>']);
             $kpi = new JiraKPIRate();
             $kpi->setRate($rate)->setMonth($month)->setTimestamp(time());
             $kpiRepo->create($kpi);
