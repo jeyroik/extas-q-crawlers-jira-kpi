@@ -12,9 +12,9 @@ use extas\interfaces\quality\crawlers\jira\kpi\rates\IJiraKPIRateRepository;
  */
 class PluginInstallJiraKPIRates extends PluginInstallDefault
 {
-    protected $selfItemClass = JiraKPIRate::class;
-    protected $selfName = 'jira kpi rate';
-    protected $selfSection = 'jira_kpi_rates';
-    protected $selfRepositoryClass = IJiraKPIRateRepository::class;
-    protected $selfUID = JiraKPIRate::FIELD__MONTH;
+    protected string $selfItemClass = JiraKPIRate::class;
+    protected string $selfName = 'jira kpi rate';
+    protected string $selfSection = 'jira_kpi_rates';
+    protected string $selfRepositoryClass = IJiraKPIRateRepository::class;
+    protected string $selfUID = JiraKPIRate::FIELD__MONTH;
 }

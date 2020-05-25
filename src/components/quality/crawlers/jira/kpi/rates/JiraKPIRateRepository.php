@@ -12,9 +12,8 @@ use extas\interfaces\quality\crawlers\jira\kpi\rates\IJiraKPIRateRepository;
  */
 class JiraKPIRateRepository extends Repository implements IJiraKPIRateRepository
 {
-    protected $idAs = '';
-    protected $scope = 'extas';
-    protected $pk = JiraKPIRate::FIELD__MONTH;
-    protected $name = 'jira_kpi_rates';
-    protected $itemClass = JiraKPIRate::class;
+    protected string $scope = 'extas';
+    protected string $pk = JiraKPIRate::FIELD__MONTH;
+    protected string $name = 'jira_kpi_rates';
+    protected string $itemClass = JiraKPIRate::class;
 }

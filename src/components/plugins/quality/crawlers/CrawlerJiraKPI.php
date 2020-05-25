@@ -25,8 +25,8 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class CrawlerJiraKPI extends Crawler
 {
-    protected $title = '[Jira] KPI rates';
-    protected $description = 'Calculate jira kpi rates.';
+    protected string $title = '[Jira] KPI rates';
+    protected string $description = 'Calculate jira kpi rates.';
 
     /**
      * @param OutputInterface $output

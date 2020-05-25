@@ -14,5 +14,5 @@ use extas\interfaces\quality\crawlers\jira\IHasTimestamp;
  */
 interface IJiraKPIRate extends IItem, IHasRate, IHasTimestamp, IHasMonth
 {
-    const SUBJECT = 'extas.quality.crawler.jira.kpi';
+    public const SUBJECT = 'extas.quality.crawler.jira.kpi';
 }
