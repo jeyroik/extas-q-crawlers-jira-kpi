@@ -3,7 +3,7 @@
   "package_classes": [
     {
       "class": "extas\\components\\quality\\crawlers\\jira\\kpi\\rates\\JiraKPIRateRepository",
-      "interface": "extas\\interfaces\\quality\\crawlers\\jira\\kpi\\rates\\IJiraKPIRateRepository"
+      "interface": "jiraKPIRateRepository"
     }
   ],
   "plugins": [
@@ -14,6 +14,16 @@
     {
       "class": "extas\\components\\plugins\\quality\\crawlers\\CrawlerJiraKPI",
       "stage": "extas.quality.crawl"
+    }
+  ],
+  "extensions": [
+    {
+      "class": "extas\\components\\extensions\\ExtensionRepositoryGet",
+      "interface": "extas\\interfaces\\extensions\\IExtensionRepositoryGet",
+      "subject": "*",
+      "methods": [
+        "jiraKPIRateRepository"
+      ]
     }
   ]
 }
